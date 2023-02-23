@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint .",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "mongo": "C:\\\"Program Files\"\\MongoDB\\Server\\5.0\\bin\\mongo.exe",
+    "showPIDs": "netstat -ano | findstr \"27017\""
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,8 @@
   "homepage": "https://github.com/rhwette/se_project_express#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.9.2"
+    "mongoose": "^6.9.2",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "eslint": "^8.34.0",
