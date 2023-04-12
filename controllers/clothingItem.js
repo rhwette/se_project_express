@@ -2,17 +2,24 @@ const ClothingItem = require('../models/clothingItem');
 
 //CREATE (post)
 const createItem = (req, res) => {
-  console.log('RESPONSE', res);
-  console.log('REQUEST', req);
-  console.log(req.body);
+  console.log(req.user._id);
+
+  // console.log('RESPONSE', res);
+  // console.log('REQUEST', req);
+  // console.log(req.body);
 
   const { name, weather, imageURL } = req.body;
 
   // can use shorthand, but if changing will need to use full key:value pair
   //ClothingItem.create({ name, weather, imageURL })
-  ClothingItem.create({ name: name, weather: weather, imageURL: imageURL })
+  ClothingItem.create({
+    name: name,
+    weather: weather,
+    imageURL: imageURL,
+    owner: req.user._id,
+  })
     .then((item) => {
-      console.log(item);
+      // console.log(item);
       res.send({ data: item });
     })
     .catch((e) => {
