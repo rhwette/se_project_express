@@ -12,7 +12,6 @@
     "mongo": "C:\\\"Program Files\"\\MongoDB\\Server\\5.0\\bin\\mongo.exe",
     "showPIDs": "netstat -ano | findstr \"27017\"",
     "gh-deploy": "gh-pages -d dist"
-
   },
   "repository": {
     "type": "git",
@@ -26,16 +25,18 @@
   "homepage": "https://github.com/rhwette/se_project_express#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.9.2",
-    "validator": "^13.9.0"
+    "mongoose": "^6.11.1",
+    "validator": "^13.9.0",
+    "webpack": "^5.78.0"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "eslint": "^8.34.0",
+    "eslint": "^8.40.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.20",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.8",
+    "webpack-cli": "^5.0.1"
   }
 }

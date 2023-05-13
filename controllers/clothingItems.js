@@ -1,6 +1,6 @@
 const ClothingItem = require('../models/clothingItem');
 
-//CREATE (post)
+// CREATE (post)
 const createItem = (req, res) => {
   console.log(req.user._id);
 
@@ -11,11 +11,11 @@ const createItem = (req, res) => {
   const { name, weather, imageURL } = req.body;
 
   // can use shorthand, but if changing will need to use full key:value pair
-  //ClothingItem.create({ name, weather, imageURL })
+  // ClothingItem.create({ name, weather, imageURL })
   ClothingItem.create({
-    name: name,
-    weather: weather,
-    imageURL: imageURL,
+    name,
+    weather,
+    imageURL,
     owner: req.user._id,
   })
     .then((item) => {
@@ -27,7 +27,7 @@ const createItem = (req, res) => {
     });
 };
 
-//READ (get)
+// READ (get)
 const getItems = (req, res) => {
   ClothingItem.find({})
     .then((items) => res.status(200).send(items))
@@ -36,12 +36,12 @@ const getItems = (req, res) => {
     });
 };
 
-//UPDATE (put)
+// UPDATE (put)
 const updateItem = (req, res) => {
   const { itemId } = req.params;
   const { imageURL } = req.body;
 
-  //first find the item that requires updating
+  // first find the item that requires updating
   ClothingItem.findByIdAndUpdate(itemId, { $set: { imageURL } })
     .orFail()
     .then((item) => res.status(200).send({ data: item }))
@@ -50,7 +50,7 @@ const updateItem = (req, res) => {
     });
 };
 
-//DELETE (delete)
+// DELETE (delete)
 const deleteItem = (req, res) => {
   const { itemId } = req.params;
 
