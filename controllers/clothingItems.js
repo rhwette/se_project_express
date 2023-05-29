@@ -1,12 +1,11 @@
 const ClothingItem = require('../models/clothingItem');
 
-// CREATE (post)
+// CREATE (POST)
 const createItem = (req, res) => {
-  console.log(req.user._id);
-
-  // console.log('RESPONSE', res);
-  // console.log('REQUEST', req);
-  // console.log(req.body);
+  console.log('RESPONSE', res);
+  console.log('REQUEST', req);
+  // console.log(req.user._id);
+  console.log(req.body);
 
   const { name, weather, imageURL } = req.body;
 
@@ -19,7 +18,7 @@ const createItem = (req, res) => {
     owner: req.user._id,
   })
     .then((item) => {
-      // console.log(item);
+      console.log(item);
       res.send({ data: item });
     })
     .catch((e) => {
@@ -27,7 +26,7 @@ const createItem = (req, res) => {
     });
 };
 
-// READ (get)
+// READ (GET)
 const getItems = (req, res) => {
   ClothingItem.find({})
     .then((items) => res.status(200).send(items))
@@ -36,7 +35,7 @@ const getItems = (req, res) => {
     });
 };
 
-// UPDATE (put)
+// UPDATE (PUT)
 const updateItem = (req, res) => {
   const { itemId } = req.params;
   const { imageURL } = req.body;

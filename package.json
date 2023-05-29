@@ -1,7 +1,7 @@
 {
   "name": "se_project_express",
   "version": "1.0.0",
-  "description": "",
+  "description": "the back-end project is focused on creating a server for the WTWR applicaiton",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/rhwette/se_project_express#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "jshint": "^2.13.6",
     "mongoose": "^6.11.1",
     "validator": "^13.9.0",
     "webpack": "^5.78.0"

@@ -1,6 +1,6 @@
 const User = require('../models/user');
 
-// CREATE (post / create new user)
+// CREATE (POST / create new user)
 const createUser = (req, res) => {
   // console.log('RESPONSE', res);
   // console.log('REQUEST', req);
@@ -18,7 +18,7 @@ const createUser = (req, res) => {
     });
 };
 
-// READ (get / find all users)
+// READ (GET / find all users)
 const getUsers = (req, res) => {
   // console.log('RESPONS', res);
   // console.log('REQUEST', req);
@@ -35,7 +35,7 @@ const getUsers = (req, res) => {
     });
 };
 
-// READ (get / findById)
+// READ (GET / findById)
 // console.log('RESPONS', res);
 // console.log('REQUEST', req);
 

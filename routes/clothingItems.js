@@ -1,9 +1,9 @@
 const router = require('express').Router();
 
-const { createItem } = require('../controllers/clothingItem');
-const { getItems } = require('../controllers/clothingItem');
-const { updateItem } = require('../controllers/clothingItem');
-const { deleteItem } = require('../controllers/clothingItem');
+const { createItem } = require('../controllers/clothingItems');
+const { getItems } = require('../controllers/clothingItems');
+const { updateItem } = require('../controllers/clothingItems');
+const { deleteItem } = require('../controllers/clothingItems');
 
 // CRUD
 
@@ -11,12 +11,12 @@ const { deleteItem } = require('../controllers/clothingItem');
 router.post('/', createItem);
 
 // Read
-router.get('/', getItems);
+router.get('/items', getItems);
 
 // Update
-router.put('/:itemId', updateItem);
+router.put('/items/:itemId', updateItem);
 
 // Delete
-router.delete('/:itemId', deleteItem);
+router.delete('/items/:itemId', deleteItem);
 
 module.exports = router;
